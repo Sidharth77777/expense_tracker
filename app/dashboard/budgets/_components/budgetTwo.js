@@ -111,7 +111,7 @@ export default function BudgetTwo({refreshAll}){
     })
 
     return (
-        <div className="w-full bg-[#291043] rounded-xl p-6">
+        <div className="w-full bg-[#291043] rounded-xl sm:p-6 p-2">
             <div className="flex justify-between items-center w-full">
                 <div>
                     <h1 className="text-base lg:text-2xl font-bold">BUDGET CATEGORIES</h1>
