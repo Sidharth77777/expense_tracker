@@ -7,15 +7,18 @@ import { Label } from "@/components/ui/label";
 import { Plus, Upload, X } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import Spinner from "../../_components/spinner";
 
 export default function AddExpense({budgetId,reFetchTrigger}){
 
     const [openCard, setOpenCard] = useState(false)
+    const [creating, setCreating] = useState(false)
 
     const [name, setName] = useState('')
     const [amount, setAmount] = useState('')
 
     const createTheExpense = async(expenseName, expenseAmount) => {
+        setCreating(true)
         try{
             const res = await fetch('/api/createExpense',{
                 method : 'POST',
@@ -51,6 +54,7 @@ export default function AddExpense({budgetId,reFetchTrigger}){
             console.error("Expense creation failed:", error)
             toast.error('Error creating expense ❌')
         }
+        setCreating(false)
     }
 
     return (
@@ -97,7 +101,7 @@ export default function AddExpense({budgetId,reFetchTrigger}){
                     
                     
                 </div>
-                <Button disabled={!name || !amount} onClick={async() => await createTheExpense(name,parseFloat(amount))} className="mt-3 cursor-pointer bg-green-500 hover:bg-purple-500 text-white sm:text-lg">Save Expense</Button>
+                <Button disabled={!name || !amount} onClick={async() => await createTheExpense(name,parseFloat(amount))} className="mt-3 cursor-pointer bg-green-500 hover:bg-purple-500 text-white sm:text-lg">{creating && <Spinner />}Save Expense</Button>
             </motion.div>
             }
             </AnimatePresence>
