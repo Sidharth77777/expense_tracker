@@ -145,10 +145,10 @@ export default function DashTwo (){
                         <div>
                             <h3 className="text-base font-bold mb-2">{r.name}</h3>
                             <div className="flex items-center gap-3">
-                            <div className="px-3 rounded-3xl" style={{ backgroundColor: r.categoryBgColor }}>
+                            <div className="sm:px-3 px-2 rounded-3xl" style={{ backgroundColor: r.categoryBgColor }}>
                                 <span style={{ color: r.categoryTextColor }}>{r.category}</span>
                             </div>
-                            <span className="sm:text-sm opacity-50">{r.stats} ago</span>
+                            <span className="sm:text-sm text-[10px] opacity-50">{r.stats} ago</span>
                             </div>
                         </div>
                         <div>

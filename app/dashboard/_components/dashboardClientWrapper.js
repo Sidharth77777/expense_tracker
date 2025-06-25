@@ -38,7 +38,7 @@ export default function DashboardClientWrapper({ children }) {
         ) : (
           <>
             
-            <div className="pt-16 pb-24 px-10 mt-10">{children}</div>
+            <div className="sm:pt-16 sm:pb-24 sm:px-10 sm:mt-10 pt-20 pb-24 px-3">{children}</div>
           </>
         )}
       </div>
