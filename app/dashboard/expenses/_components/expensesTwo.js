@@ -112,7 +112,22 @@ export default function ExpensesTwo({ refreshTrigger }) {
 
       {/* List */}
       {!expensesLoaded ? (
-        <SpinnerMain />
+        <div className="animate-pulse space-y-4 mt-6">
+          {[...Array(4)].map((_, i) => (
+            <div
+              key={i}
+              className="w-full bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl p-4"
+            >
+              <div className="flex justify-between items-center mb-2">
+                <div className="h-4 w-1/3 bg-[#3f2a58] rounded"></div>
+                <div className="h-4 w-6 bg-[#3f2a58] rounded"></div>
+              </div>
+              <div className="h-3 w-1/2 bg-[#3f2a58] rounded mb-1"></div>
+              <div className="h-3 w-1/4 bg-[#3f2a58] rounded mb-1"></div>
+              <div className="h-3 w-1/3 bg-[#3f2a58] rounded"></div>
+            </div>
+          ))}
+        </div>
       ) : (
         <ExpensesList
           expenseList={filteredExpenses}

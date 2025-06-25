@@ -122,10 +122,30 @@ export default function BudgetTwo({refreshAll}){
                     <CreateBudget onBudgetCreated={() => setRefreshFlag(true)} refreshAll={refreshAll} />
                 </div>
             </div>
-               <div className="w-full grid grid-cols-1  xl:grid-cols-2 gap-4 mb-8 mt-6">
+               
 
-
-                    {!budgetsLoaded ? <div className="w-full flex justify-center items-center"><SpinnerMain /></div> : budgetsLoaded && budgetCategoriesList.length==0 ? <div className="w-full flex justify-center items-center"><h1 className="sm:text-xl text-xl">📝 No budgets yet – Tap the ➕ to create one!</h1></div> : budgetsLoaded && budgetCategoriesList.map((b) => (
+    {!budgetsLoaded && (<div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-4 mb-8 mt-6 animate-pulse">
+    {[...Array(4)].map((_, i) => (
+      <div key={i} className="w-full h-[220px] bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl px-6 py-6">
+        <div className="flex justify-between items-start mb-4">
+          <div className="flex flex-col gap-3 w-2/3">
+            <div className="h-4 bg-[#3f2a58] rounded w-1/2"></div>
+            <div className="h-3 bg-[#3f2a58] rounded w-2/3"></div>
+          </div>
+          <div className="flex gap-3">
+            <div className="h-6 w-6 bg-[#3f2a58] rounded-full"></div>
+            <div className="h-6 w-6 bg-[#3f2a58] rounded-full"></div>
+          </div>
+        </div>
+        <div className="h-4 bg-[#3f2a58] rounded w-1/3 mb-4"></div>
+        <div className="w-full h-3 bg-[#3f2a58] rounded-full"></div>
+        <div className="mt-4 h-3 bg-[#3f2a58] rounded w-1/4"></div>
+      </div>
+    ))}
+  </div>) }
+    <div className="w-full grid grid-cols-1  xl:grid-cols-2 gap-4 mb-8 mt-6">
+    {budgetsLoaded && budgetCategoriesList.length==0 && (<div className="w-full flex justify-center items-center"><h1 className="sm:text-xl text-xl">📝 No budgets yet – Tap the ➕ to create one!</h1></div>)}
+    {budgetsLoaded && budgetCategoriesList.map((b) => (
                     <div
                     onClick={() => router.push(`/dashboard/budgets/${b.id}`)}
                     key={b.id}

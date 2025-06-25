@@ -140,7 +140,11 @@ export default function DashTwo (){
 
                 <div className='mt-3 mb-2 border-b-1 border-[#412958]'>
 
-                    {loadRecentExpenses ? (<SpinnerMain />) : recentTransactions.map((r) => (
+                    {loadRecentExpenses ? (<div className="animate-pulse flex flex-col gap-3 mt-4">
+                        {[...Array(4)].map((_, idx) => (
+                        <div key={idx} className="w-full h-[84px] bg-[#412958] rounded-xl"></div>
+                        ))}
+                    </div>) : recentTransactions.map((r) => (
                         <div key={r.id} className="w-full min-h-[84px] bg-[#260d3c] rounded-xl px-4 py-3 mb-3 flex justify-between items-center">
                         <div>
                             <h3 className="text-base font-bold mb-2">{r.name}</h3>
@@ -159,7 +163,6 @@ export default function DashTwo (){
                         </div>
                         </div>
                     ))}
-
 
 
                 </div>

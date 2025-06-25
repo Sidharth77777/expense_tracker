@@ -30,42 +30,7 @@ export default function LoadingExpenses() {
           <div className="h-10 lg:w-6/8 sm:w-3/5 bg-[#432d5a] rounded-2xl" />
           <div className="h-10 lg:w-2/8 sm:w-2/5 bg-[#432d5a] rounded-xl" />
         </div>
-
-        <div className="mt-5 animate-pulse">
-          {[1, 2, 3, 4, 5].map((c) => (
-            <div
-              key={c}
-              className="flex justify-between items-center mb-5 bg-[#240d39] rounded-xl p-5"
-            >
-              <div>
-                <div className="flex mb-2 items-center gap-4">
-                  <div className="h-5 w-40 bg-[#432d5a] rounded-md" />
-                  <div className="h-5 w-16 bg-purple-500 rounded-3xl" />
-                </div>
-                <div className="flex items-center gap-2 opacity-80">
-                  <div className="h-4 w-4 bg-[#432d5a] rounded-full" />
-                  <div className="h-4 w-24 bg-[#432d5a] rounded" />
-                </div>
-              </div>
-
-              <div className="flex gap-8 items-center">
-                <div className="h-6 w-20 bg-[#432d5a] rounded-md" />
-                <div className="flex gap-5">
-                  <div className="h-5 w-5 bg-[#432d5a] rounded" />
-                  <div className="h-5 w-5 bg-[#432d5a] rounded" />
-                </div>
-              </div>
-            </div>
-          ))}
-
-          <div className="flex justify-center gap-3 mt-6">
-            <div className="h-8 w-8 bg-[#432d5a] rounded" />
-            <div className="h-8 w-8 bg-[#432d5a] rounded" />
-            <div className="h-8 w-8 bg-[#432d5a] rounded" />
-            <div className="h-8 w-8 bg-[#432d5a] rounded" />
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
+</div>
   );
 }
