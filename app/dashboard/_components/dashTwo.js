@@ -121,7 +121,7 @@ export default function DashTwo (){
     // ]
 
     return (
-        <div className="flex flex-wrap xl:flex-nowrap justify-center gap-4 items-center">
+        <div className="flex flex-col xl:flex-row gap-6 w-full">
             <div className="w-full md:w-full xl:w-1/2 h-120 bg-[#291043] rounded-xl p-5">
                 <h1 className='text-base sm:text-3xl'>Expense Categories</h1>
                 <h2 className='text-base sm:text-lg'>Current Month Breakdown</h2>
@@ -131,7 +131,7 @@ export default function DashTwo (){
             </div>
 
 
-            <div className="w-full md:w-full xl:w-1/2 h-120 bg-[#291043] rounded-xl p-5 overflow-y-scroll scrollNone">
+            <div className="w-full xl:w-1/2 bg-[#291043] rounded-xl p-5 max-h-[480px] overflow-y-auto scrollNone mt-6 xl:mt-0">
                 <div className='flex items-center gap-3'>
                     <Clock className='text-purple-500' />
                     <h1 className='text-base sm:text-3xl'>Recent Activity</h1>
@@ -141,7 +141,7 @@ export default function DashTwo (){
                 <div className='mt-3 mb-2 border-b-1 border-[#412958]'>
 
                     {loadRecentExpenses ? (<SpinnerMain />) : recentTransactions.map((r) => (
-                        <div key={r.id} className="w-full h-20 bg-[#260d3c] rounded-xl px-6 py-3 mb-3 flex justify-between items-center" style={{ outline: `2px solid ${r.categoryBgColor}` }}>
+                        <div key={r.id} className="w-full min-h-[84px] bg-[#260d3c] rounded-xl px-4 py-3 mb-3 flex justify-between items-center">
                         <div>
                             <h3 className="text-base font-bold mb-2">{r.name}</h3>
                             <div className="flex items-center gap-3">
