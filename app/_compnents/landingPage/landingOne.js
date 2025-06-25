@@ -65,7 +65,7 @@ export default function LandingOne() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="cursor-pointer rounded-xl px-6 py-3 text-base sm:text-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:scale-105 transition font-semibold"
+          className="cursor-pointer rounded-xl sm:px-10 sm:py-5 p-4 text-base sm:text-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:scale-105 transition font-semibold"
         >
           Get Started{" "}
           <FontAwesomeIcon
@@ -80,7 +80,7 @@ export default function LandingOne() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="cursor-pointer rounded-xl px-6 py-3 text-base sm:text-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:scale-105 transition font-semibold"
+          className="cursor-pointer rounded-xl sm:px-10 sm:py-5 p-4 text-base sm:text-xl bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:scale-105 transition font-semibold"
         >
           Dashboard{" "}
           <FontAwesomeIcon
