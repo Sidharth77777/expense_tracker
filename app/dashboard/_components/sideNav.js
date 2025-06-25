@@ -58,7 +58,7 @@ export default function SideNav({ mobile = false }) {
               } ${active ? "bg-blue-800" : ""}`}
             >
               <Icon className="w-6 h-6" />
-              <span className={`text-base sm:text-xl ${active ? 'text-white' : 'text-neutral-400'}`}>{name}</span>
+              <span className={`text-sm sm:text-xl ${active ? 'text-white' : 'text-neutral-400'}`}>{name}</span>
             </div>
           </Link>
         );

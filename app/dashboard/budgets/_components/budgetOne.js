@@ -73,21 +73,24 @@ export default function BudgetOne({refreshAll}) {
         },
     ]
     return (
-        <div className="w-full flex flex-wrap lg:flex-nowrap justify-between items-center gap-2 mb-8">
-
-        {budgetCardsList.map((c) => (
-            <div key={c.id} className="lg:w-1/3 lg:h-40 w-full h-30 rounded-3xl flex justify-between bg-[#291043]  px-4 py-4">
-            <div className="flex flex-col items-start">
-                <h2 className="md:text-lg font-bold">{c.head}</h2>
-                <h1 className={`text-base sm:text-2xl font-extrabold flex justify-center items-center mt-4 mb-2 ${c.color}`}>₹{c.value}</h1>
-                <h3 className={`text-base sm:text-sm ${c.color}`}>{c.id===2 ? `${c.stats}% of budget used` : c.stats}</h3>
-            </div>
-            <div>
-                <c.icon className={`${c.color}`} />
-            </div>
+<div className="w-full flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-nowrap mb-8">
+    {budgetCardsList.map((c) => (
+      <div
+        key={c.id}
+        className="flex justify-between items-center p-4 rounded-2xl bg-[#291043] w-full sm:w-[48%] lg:w-1/3"
+      >
+        <div className="flex flex-col gap-1">
+          <h2 className="text-sm sm:text-base font-semibold">{c.head}</h2>
+          <h1 className={`${c.color} text-xl sm:text-2xl font-bold`}>₹{c.value}</h1>
+          <p className={`text-sm opacity-80 ${c.color}`}>
+            {c.id === 2 ? `${c.stats}% of budget used` : c.stats}
+          </p>
         </div>
-        ))}
+        <div className="ml-4">
+          <c.icon className={`w-6 h-6 ${c.color}`} />
+        </div>
       </div>
-
+    ))}
+  </div>
     )
 }
