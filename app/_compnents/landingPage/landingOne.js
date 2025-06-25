@@ -9,7 +9,7 @@ export default function LandingOne() {
   const router = useRouter();
 
   return (
-    <div className="px-6 sm:px-6 lg:px-8 py-10 sm:min-h-screen flex flex-col items-center">
+    <div className="px-6 sm:px-6 lg:px-8 py-10 sm:min-h-screen h-[600] flex flex-col items-center">
       
       <motion.h1
         initial={{ opacity: 0, x: 50 }}
@@ -58,7 +58,7 @@ export default function LandingOne() {
       </motion.p>
 
       
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10 mb-12">
+      <div className="flex flex-row sm:flex-row justify-center items-center gap-4 sm:gap-10 mb-12">
         <motion.button
           onClick={() => router.push("/sign-up")}
           initial={{ opacity: 0, y: 50 }}
