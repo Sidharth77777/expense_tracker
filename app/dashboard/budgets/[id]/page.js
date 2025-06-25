@@ -115,7 +115,7 @@ export default function BudgetDetails({ params: paramsPromise }) {
         }} className="w-full">
       <h1 className="capitalize sm:text-2xl mb-2 font-extrabold">{budgetExpenseInfo?.budget?.name}</h1>
 
-<div className={`w-full mb-3 bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl sm:px-6 sm:py-3 p-2 outline-2 ${
+<div className={`w-full mb-3 bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl sm:px-6 sm:py-3 p-3 outline-2 ${
   progress < 90
     ? "outline-purple-800 xl:hover:shadow-[0_0_20px_4px_rgba(147,51,234,0.4)]"
     : "outline-red-800 xl:hover:shadow-[0_0_20px_4px_rgba(239,68,68,0.4)]"
@@ -152,22 +152,22 @@ export default function BudgetDetails({ params: paramsPromise }) {
         <div className="flex items-center mt-2 mb-2 gap-2">
           <Target className="sm:w-10 sm:h-10 text-[#446daa]" />
           <div>
-            <span className="opacity-80 text-[12px] sm:text-xl">Allocated</span>
-            <h1 className="text-[#446daa] text-[12px] sm:text-xl">₹{Number(budget) % 1 === 0 ? Number(budget) : Number(budget).toFixed(2)}</h1>
+            <span className="opacity-80 text-[15px] sm:text-xl">Allocated</span>
+            <h1 className="text-[#446daa] text-[15px] sm:text-xl">₹{Number(budget) % 1 === 0 ? Number(budget) : Number(budget).toFixed(2)}</h1>
           </div>
         </div>
         <div className="flex items-center mt-2 mb-2 gap-2">
           <IndianRupee className="sm:w-10 sm:h-10 text-[#d8b4fe]" />
           <div>
-            <span className="opacity-80 text-[12px] sm:text-xl">Spent</span>
-            <h1 className="text-[#d8b4fe] text-[12px] sm:text-xl">₹{Number(spent) % 1 === 0 ? Number(spent) : Number(spent).toFixed(2)}</h1>
+            <span className="opacity-80 text-[15px] sm:text-xl">Spent</span>
+            <h1 className="text-[#d8b4fe] text-[15px] sm:text-xl">₹{Number(spent) % 1 === 0 ? Number(spent) : Number(spent).toFixed(2)}</h1>
           </div>
         </div>
         <div className="flex items-center mt-2 mb-2 gap-2">
           <Calendar className="sm:w-10 sm:h-10 text-[#4ade80]" />
           <div>
-            <span className="opacity-80 text-[12px] lg:text-xl">Remaining</span>
-            <h1 className="text-[#4ade80] text-[12px] sm:text-xl">₹{Number(remaining) % 1 === 0 ? Number(remaining) : Number(remaining).toFixed(2)}</h1>
+            <span className="opacity-80 text-[15px] lg:text-xl">Remaining</span>
+            <h1 className="text-[#4ade80] text-[15px] sm:text-xl">₹{Number(remaining) % 1 === 0 ? Number(remaining) : Number(remaining).toFixed(2)}</h1>
           </div>
         </div>
       </div>
