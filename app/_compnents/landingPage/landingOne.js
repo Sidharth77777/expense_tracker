@@ -9,7 +9,7 @@ export default function LandingOne() {
   const router = useRouter();
 
   return (
-    <div className="px-6 sm:px-6 lg:px-8 py-10 min-h-screen flex flex-col items-center">
+    <div className="px-6 sm:px-6 lg:px-8 py-10 sm:min-h-screen flex flex-col items-center">
       
       <motion.h1
         initial={{ opacity: 0, x: 50 }}
