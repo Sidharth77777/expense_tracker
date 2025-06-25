@@ -26,7 +26,7 @@ export default function DashBoardHeader(){
 
         <SignedOut>
           <SignInButton>
-            <button className="bg-green-700 px-5 border-3 cursor-pointer border-green-600 rounded p-2 text-2xl">
+            <button className="bg-green-700 sm:px-5 border-3 cursor-pointer border-green-600 rounded sm:p-2 px-4 py-1 sm:text-2xl text-base">
               Sign In
             </button>
           </SignInButton>

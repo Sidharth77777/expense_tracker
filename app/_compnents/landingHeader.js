@@ -35,7 +35,7 @@ export default function LandingHeader() {
 
         <SignedOut>
           <SignInButton>
-            <button className="bg-green-700 px-5 border-3 cursor-pointer border-green-600 rounded p-2 text-2xl">
+            <button className="bg-green-700 sm:px-5 border-3 cursor-pointer border-green-600 rounded sm:p-2 sm:text-2xl text-base px-4 py-1">
               Sign In
             </button>
           </SignInButton>
