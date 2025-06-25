@@ -99,7 +99,7 @@ export default function EditTheBudget({ id, name, budget, emoji: initialEmoji, c
                   placeholder="Ex: Shopping"
                 />
               </div>
-              <div className="mt-2">
+              <div className="mt-5">
                 <span className="text-sm opacity-80">Budget Amount (in Rs)</span>
                 <Input
                   value={budgetAmount}

@@ -84,11 +84,11 @@ export default function CreateBudget({onBudgetCreated,refreshAll}) {
 
                         {openEmojiPicker && <div className="absolute z-50"><EmojiPicker onEmojiClick={(e) => {setEmoji(e.emoji), setOpenEmojiPicker(false)}} /></div>}
 
-                        <div className="mt-2">
+                        <div className="mt-5">
                             <span>Budget Category</span>
                             <Input value={budgetName} onChange={(e) => setBudgetName(e.target.value) } placeholder="Ex: Shopping" />
                         </div>
-                        <div className="mt-2">
+                        <div className="mt-5">
                             <span>Budget Amount {"(in Rs)"}</span>
                             <Input value={budgetAmount} onChange={(e) => {const value = e.target.value ; setBudgetAmount(value)}} placeholder="Ex: 600" type="number" min={0} onKeyDown={(e) => {
                             const allowedKeys = [

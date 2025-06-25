@@ -111,7 +111,7 @@ export default function BudgetTwo({refreshAll}){
     })
 
     return (
-        <div className="w-full bg-[#291043] rounded-xl sm:p-6 p-2">
+        <div className="w-full bg-[#291043] rounded-xl sm:p-6 p-3">
             <div className="flex justify-between items-center w-full">
                 <div>
                     <h1 className="text-base lg:text-2xl font-bold">BUDGET CATEGORIES</h1>
@@ -129,7 +129,7 @@ export default function BudgetTwo({refreshAll}){
                     <div
                     onClick={() => router.push(`/dashboard/budgets/${b.id}`)}
                     key={b.id}
-                    className={`w-full h-60 bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl cursor-pointer px-6 py-6 outline-2 ${
+                    className={`w-full sm:h-50 bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl cursor-pointer px-6 py-6 outline-2 ${
                         b.progress < 90
                         ? 'outline-purple-800 xl:hover:shadow-[0_0_20px_4px_rgba(147,51,234,0.4)]'
                         : 'outline-red-800 xl:hover:shadow-[0_0_20px_4px_rgba(239,68,68,0.4)]'

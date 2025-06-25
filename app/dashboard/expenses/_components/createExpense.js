@@ -118,7 +118,7 @@ export default function CreateExpense({onExpenseCreated}){
                     <Input value={expenseName} placeholder="Ex: Electricity Bill" onChange={(e) => setExpenseName(e.target.value)} />
                     </div>
 
-                    <div className="mt-2">
+                    <div className="mt-5">
                         <span>
                         Expense Amount {'(in Rs)'}{" "}
                         <span className="text-red-500 font-bold">
@@ -148,7 +148,7 @@ export default function CreateExpense({onExpenseCreated}){
                         }} />
                     </div>
 
-                    <div className="mt-2">
+                    <div className="mt-5">
                         <span>Budget Category</span>
                             <div className="w-full">
                             <DropdownMenu>
