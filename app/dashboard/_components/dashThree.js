@@ -193,7 +193,27 @@ export default function DashThree({ chartData }) {
               <BarChart data={monthlyData}>
                 <XAxis dataKey="month" />
                 <YAxis />
-                <Tooltip formatter={(val) => `₹${val.toFixed(2)}`} />
+                <Tooltip
+                  content={({ payload }) => {
+                    if (!payload || !payload.length) return null
+                    return (
+                      <div className="bg-white text-black p-2 rounded shadow-none text-sm border border-[#503c66]">
+                        {payload.map((entry, index) => (
+                          <div key={index}>
+                            {entry.name}: ₹{(entry.value).toFixed(2)}
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  }}
+                  cursor={{ fill: 'rgba(255, 255, 255, 0.05)' }}
+                  wrapperStyle={{
+                    backgroundColor: '#291043',
+                    border: 'none',
+                    boxShadow: 'none',
+                  }}
+                />
+
                 <Bar dataKey="budget" fill={budgetColor} name="Budget" />
                 <Bar dataKey="expense" fill={expenseColor} name="Spent" />
               </BarChart>
