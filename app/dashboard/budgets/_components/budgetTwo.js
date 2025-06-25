@@ -117,21 +117,30 @@ export default function BudgetTwo({refreshAll}){
                     <h1 className="text-base lg:text-2xl font-bold">BUDGET CATEGORIES</h1>
                     <h2 className="text-base lg:text-sm">Manage your spending categories and limits</h2>
                 </div>
-                <div className="bg-[#9333ea] rounded cursor-pointer px-3 py-2 hover:bg-blue-600 gap-2 flex justify-between items-center"> 
+                <div className="bg-[#9333ea] rounded cursor-pointer sm:px-3 sm:py-2 p-2 hover:bg-blue-600 gap-2 flex justify-between items-center"> 
                     <Plus />
                     <CreateBudget onBudgetCreated={() => setRefreshFlag(true)} refreshAll={refreshAll} />
                 </div>
             </div>
-                <div className="flex mb-8 w-full items-center flex-wrap gap-6 mt-6">
+               <div className="w-full grid grid-cols-1  xl:grid-cols-2 gap-4 mb-8 mt-6">
 
-                    {!budgetsLoaded ? <div className="w-full flex justify-center items-center"><SpinnerMain /></div> : budgetsLoaded && budgetCategoriesList.length==0 ? <div className="w-full flex justify-center items-center"><h1 className="sm:text-xl">📝 No budgets yet – Tap the ➕ to create one!</h1></div> : budgetsLoaded && budgetCategoriesList.map((b) => (
-                        <div onClick={() => router.push(`/dashboard/budgets/${b.id}`)} key={b.id} className={`xl:w-[48%] w-full h-50 bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl cursor-pointer px-6 py-6 outline-2 ${b.progress<90 ? 'outline-purple-800 xl:hover:shadow-[0_0_20px_4px_rgba(147,51,234,0.4)]' : 'outline-red-800 xl:hover:shadow-[0_0_20px_4px_rgba(239,68,68,0.4)]'} transition-shadow duration-300 ease-in-out `}>
+
+                    {!budgetsLoaded ? <div className="w-full flex justify-center items-center"><SpinnerMain /></div> : budgetsLoaded && budgetCategoriesList.length==0 ? <div className="w-full flex justify-center items-center"><h1 className="sm:text-xl text-xl">📝 No budgets yet – Tap the ➕ to create one!</h1></div> : budgetsLoaded && budgetCategoriesList.map((b) => (
+                    <div
+                    onClick={() => router.push(`/dashboard/budgets/${b.id}`)}
+                    key={b.id}
+                    className={`w-full  h-50 bg-gradient-to-r from-[#160c27] via-[#240d39] to-[#230d38] rounded-xl cursor-pointer px-6 py-6 outline-2 ${
+                        b.progress < 90
+                        ? 'outline-purple-800 xl:hover:shadow-[0_0_20px_4px_rgba(147,51,234,0.4)]'
+                        : 'outline-red-800 xl:hover:shadow-[0_0_20px_4px_rgba(239,68,68,0.4)]'
+                    } transition-shadow duration-300 ease-in-out`}
+                    >
                             <div className="flex justify-between items-center">
                                 <div>
                                 <div className="flex items-center gap-3 mb-5">
                                     <div className={`rounded-full flex justify-center items-center h-6 w-6`}>{b.icon}</div>
                                     <h2 className="text-base sm:text-lg">{b.name}</h2>
-                                    <div className={`px-3 py-1 rounded-2xl ${b.progress<=60 ? "bg-green-300 " : b.progress<=90 ? "bg-orange-500" : "bg-red-500"}`}>
+                                    <div className={`sm:px-3 sm:py-1 px-2 rounded-2xl ${b.progress<=60 ? "bg-green-300 " : b.progress<=90 ? "bg-orange-500" : "bg-red-500"}`}>
                                         <span className="text-black">{b.warner<=60 ? "On Track" : b.warner<=90 ? "Warning" : b.warner<100 ? "Alert" : b.warner==100 ? "Full" : "Exceeded ! Increase the budget" }</span>
                                 </div>
                                 </div>

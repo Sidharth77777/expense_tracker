@@ -70,7 +70,7 @@ export default function CreateBudget({onBudgetCreated,refreshAll}) {
     return(
         <div>
             <Dialog open={open} onOpenChange={setOpen}>
-            <DialogTrigger asChild className="cursor-pointer"><h3 className="text-base lg:text-lg">Add Budget</h3></DialogTrigger>
+            <DialogTrigger asChild className="cursor-pointer"><h3 className=" sm:text-lg text-[15px]">Add Budget</h3></DialogTrigger>
             <DialogContent>
                 <DialogHeader>
                 <DialogTitle>Create your New Budget !</DialogTitle>
