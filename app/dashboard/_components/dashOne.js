@@ -60,10 +60,17 @@ export default function DashOne ({setChartData}){
         }
 
         const current = summarize(currentData)
-        setTotalSpent(current.totalExpense % 1 === 0 ? current.totalExpense.toFixed(0) : current.totalExpense.toFixed(2))
-        setTotalBudget(current.totalBudget % 1 === 0 ? current.totalBudget.toFixed(0) : current.totalBudget.toFixed(2))
-        setBudgetUsed(current.budgetUsed % 1 === 0 ? current.budgetUsed.toFixed(0) : current.budgetUsed.toFixed(2))
-        setNetSavingsRate(current.savings % 1 === 0 ? current.savings.toFixed(0) : current.savings.toFixed(2))
+        const all = summarize(data);
+        
+        //setTotalSpent(current.totalExpense % 1 === 0 ? current.totalExpense.toFixed(0) : current.totalExpense.toFixed(2))
+        //setTotalBudget(current.totalBudget % 1 === 0 ? current.totalBudget.toFixed(0) : current.totalBudget.toFixed(2))
+        //setBudgetUsed(current.budgetUsed % 1 === 0 ? current.budgetUsed.toFixed(0) : current.budgetUsed.toFixed(2))
+        //setNetSavingsRate(current.savings % 1 === 0 ? current.savings.toFixed(0) : current.savings.toFixed(2))
+        
+        setTotalSpent(all.totalExpense % 1 === 0 ? all.totalExpense.toFixed(0) : all.totalExpense.toFixed(2));
+        setTotalBudget(all.totalBudget % 1 === 0 ? all.totalBudget.toFixed(0) : all.totalBudget.toFixed(2));
+        setBudgetUsed(all.budgetUsed % 1 === 0 ? all.budgetUsed.toFixed(0) : all.budgetUsed.toFixed(2));
+        setNetSavingsRate(all.savings % 1 === 0 ? all.savings.toFixed(0) : all.savings.toFixed(2));
 
         const last = summarize(lastMonthData)
         let spentDiff = null
