@@ -35,4 +35,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-Link to the website - [Expense Tracking Website](etracking.vercel.app)
+Link to the website - [Expense Tracking Website](https://etracking.vercel.app)
