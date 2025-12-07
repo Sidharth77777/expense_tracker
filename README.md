@@ -1,38 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+# 💸 Expense Tracker Dashboard
 
-## Getting Started
+A modern **Next.js**-based expense tracking application with authentication, rich analytics, and beautiful visualizations — designed to help you take control of your spending.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔐 **User Authentication**
+  - Secure login & signup using **Clerk**
+  - Protected pages & API routes
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- 📊 **Analytics Dashboard**
+  - Total income, total expenses & balance
+  - Monthly & daily charts for insights
+  - Category-wise summary charts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 📈 **Interactive Visualizations**
+  - Built with **Recharts**
+  - Responsive charts (Line, Bar, Pie)
 
-## Learn More
+- 🧾 Expense CRUD
+  - Add, edit & delete entries
+  - Fields: amount, category, date, description
+  - Filters by category & date range
 
-To learn more about Next.js, take a look at the following resources:
+- 🗄️ Fully Server-Side Data
+  - **REST API** via Next.js Route Handlers
+  - Database powered by **Neon PostgreSQL**
+  - **Drizzle ORM** for schema & queries
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🎨 Modern UI
+  - Tailwind CSS styling
+  - Dark & light theme support
+  - Fully responsive design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Category | Technologies |
+|--------|-------------|
+| Framework | Next.js (App Router) |
+| Language | JavaScript |
+| Auth | Clerk |
+| Database | Neon PostgreSQL |
+| ORM | Drizzle ORM |
+| Charts | Recharts |
+| Styling | Tailwind CSS |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
 
-Link to the website - [Expense Tracking Website](https://etracking.vercel.app)
+## 🎯 Why I Built This
+
+Managing expenses shouldn't feel like a chore.  
+Most tools are either too basic or overloaded with features.
+
+This project aims to provide:
+
+✔ A simple & clean user experience 
+
+✔ Smart insights, not just raw numbers  
+
+✔ A fully open-source alternative  
+
+---
+
+## 📸 Preview
+
+*Get Started*
+![Get Started](https://drive.usercontent.google.com/download?id=1W6cB5ujmYsmTrikNbZow4z4p0zTAldpG&export=view&authuser=0)
+
+*Dashboard*
+![Dashboard](https://drive.usercontent.google.com/download?id=1TUDYDAdwbxJmMgWboLLYNX_L5tBEda0O&export=view&authuser=0)
+
+*Budgets*
+![Budgets](https://drive.usercontent.google.com/download?id=1OlwP3ycTqx_c72M7N4Q48pKSkYUIMZX-&export=view&authuser=0)
+
+*Expenses*
+![Expenses](https://drive.usercontent.google.com/download?id=1tE7BjGstTB7Ewps5dTL-sjF7OTBWVItb&export=view&authuser=0)
+
+*Dedicated Budgets and Expenses view*
+![Dedicated Budgets and Expenses view](https://drive.usercontent.google.com/download?id=1MJGwHbTK-xzdKWxUpvVY9g6_JiuyEJuP&export=view&authuser=0)
+
+---
+
+### Contact
+
+Developer: Sidharth K S
+
+GitHub: https://github.com/Sidharth77777
+
+X : https://x.com/cryptoSid1564
+
+---
+
