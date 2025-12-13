@@ -1,6 +1,6 @@
 # 💸 Expense Tracker 
 
-A modern **Next.js**-based expense tracking application with authentication, rich analytics, and beautiful visualizations — designed to help you take control of your spending.
+A modern **Next.js**-based expense tracking application with authentication, rich analytics, and beautiful visualizations designed to help you take control of your spending.
 
 ---
 
